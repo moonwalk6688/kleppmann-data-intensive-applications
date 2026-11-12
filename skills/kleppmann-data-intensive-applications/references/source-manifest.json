@@ -1,0 +1,697 @@
+{
+  "title": "Designing Data-Intensive Applications",
+  "author": "Martin Kleppmann",
+  "source_path": null,
+  "source_env": "KLEPPMANN_DATA_INTENSIVE_APPLICATIONS_SOURCE",
+  "sha256": "bc67a1215cde546d5d93826676afc30f4f9f6f7985fe4700b765da2fed015cd2",
+  "source_lines": 17260,
+  "source_format": "PaddleOCR-VL-1.6 Markdown",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Reliable, Scalable, and Maintainable Applications",
+      "start_line": 481,
+      "end_line": 959,
+      "file": "chapters/ch01.md",
+      "sections": [
+        [
+          509,
+          "Thinking About Data Systems"
+        ],
+        [
+          535,
+          "Reliability"
+        ],
+        [
+          539,
+          "Scalability"
+        ],
+        [
+          543,
+          "Maintainability"
+        ],
+        [
+          573,
+          "Hardware Faults"
+        ],
+        [
+          587,
+          "Software Errors"
+        ],
+        [
+          605,
+          "Human Errors"
+        ],
+        [
+          623,
+          "How Important Is Reliability?"
+        ],
+        [
+          639,
+          "Describing Load"
+        ],
+        [
+          645,
+          "Post tweet"
+        ],
+        [
+          649,
+          "Home timeline"
+        ],
+        [
+          686,
+          "Describing Performance"
+        ]
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Data Models and Query Languages",
+      "start_line": 960,
+      "end_line": 1978,
+      "file": "chapters/ch02.md",
+      "sections": [
+        [
+          988,
+          "Relational Model Versus Document Model"
+        ],
+        [
+          1004,
+          "The Birth of NoSQL"
+        ],
+        [
+          1020,
+          "The Object-Relational Mismatch"
+        ],
+        [
+          1081,
+          "Many-to-One and Many-to-Many Relationships"
+        ],
+        [
+          1109,
+          "Organizations and schools as entities"
+        ],
+        [
+          1113,
+          "Recommendations"
+        ],
+        [
+          1131,
+          "Are Document Databases Repeating History?"
+        ],
+        [
+          1145,
+          "The network model"
+        ],
+        [
+          1159,
+          "The relational model"
+        ],
+        [
+          1171,
+          "Comparison to document databases"
+        ],
+        [
+          1177,
+          "Relational Versus Document Databases Today"
+        ],
+        [
+          1183,
+          "Which data model leads to simpler application code?"
+        ]
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Storage and Retrieval",
+      "start_line": 1979,
+      "end_line": 2757,
+      "file": "chapters/ch03.md",
+      "sections": [
+        [
+          1999,
+          "Data Structures That Power Your Database"
+        ],
+        [
+          2050,
+          "Hash Indexes"
+        ],
+        [
+          2090,
+          "File format"
+        ],
+        [
+          2094,
+          "Deleting records"
+        ],
+        [
+          2098,
+          "Crash recovery"
+        ],
+        [
+          2104,
+          "Partially written records"
+        ],
+        [
+          2108,
+          "Concurrency control"
+        ],
+        [
+          2120,
+          "However, the hash table index also has limitations:"
+        ],
+        [
+          2128,
+          "SSTables and LSM-Trees"
+        ],
+        [
+          2158,
+          "Constructing and maintaining SSTables"
+        ],
+        [
+          2176,
+          "Making an LSM-tree out of SSTables"
+        ],
+        [
+          2186,
+          "Performance optimizations"
+        ]
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Encoding and Evolution",
+      "start_line": 2758,
+      "end_line": 3512,
+      "file": "chapters/ch04.md",
+      "sections": [
+        [
+          2790,
+          "Formats for Encoding Data"
+        ],
+        [
+          2805,
+          "Terminology clash"
+        ],
+        [
+          2811,
+          "Language-Specific Formats"
+        ],
+        [
+          2827,
+          "JSON, XML, and Binary Variants"
+        ],
+        [
+          2845,
+          "Binary encoding"
+        ],
+        [
+          2881,
+          "Thrift and Protocol Buffers"
+        ],
+        [
+          2935,
+          "Field tags and schema evolution"
+        ],
+        [
+          2947,
+          "Datatypes and schema evolution"
+        ],
+        [
+          2955,
+          "Avro"
+        ],
+        [
+          2995,
+          "The writer's schema and the reader's schema"
+        ],
+        [
+          3013,
+          "Schema evolution rules"
+        ],
+        [
+          3027,
+          "But what is the writer's schema?"
+        ]
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Replication",
+      "start_line": 3513,
+      "end_line": 4502,
+      "file": "chapters/ch05.md",
+      "sections": [
+        [
+          3535,
+          "Leaders and Followers"
+        ],
+        [
+          3555,
+          "Synchronous Versus Asynchronous Replication"
+        ],
+        [
+          3583,
+          "Research on Replication"
+        ],
+        [
+          3589,
+          "Setting Up New Followers"
+        ],
+        [
+          3607,
+          "Handling Node Outages"
+        ],
+        [
+          3613,
+          "Follower failure: Catch-up recovery"
+        ],
+        [
+          3617,
+          "Leader failure: Failover"
+        ],
+        [
+          3629,
+          "Failover is fraught with things that can go wrong:"
+        ],
+        [
+          3645,
+          "Implementation of Replication Logs"
+        ],
+        [
+          3649,
+          "Statement-based replication"
+        ],
+        [
+          3667,
+          "Write-ahead log (WAL) shipping"
+        ],
+        [
+          3683,
+          "Logical (row-based) log replication"
+        ]
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Partitioning",
+      "start_line": 4503,
+      "end_line": 4918,
+      "file": "chapters/ch06.md",
+      "sections": [
+        [
+          4514,
+          "Terminological confusion"
+        ],
+        [
+          4530,
+          "Partitioning and Replication"
+        ],
+        [
+          4546,
+          "Partitioning of Key-Value Data"
+        ],
+        [
+          4558,
+          "Partitioning by Key Range"
+        ],
+        [
+          4578,
+          "Partitioning by Hash of Key"
+        ],
+        [
+          4596,
+          "Consistent Hashing"
+        ],
+        [
+          4610,
+          "Skewed Workloads and Relieving Hot Spots"
+        ],
+        [
+          4622,
+          "Partitioning and Secondary Indexes"
+        ],
+        [
+          4632,
+          "Partitioning Secondary Indexes by Document"
+        ],
+        [
+          4656,
+          "Partitioning Secondary Indexes by Term"
+        ],
+        [
+          4676,
+          "Rebalancing Partitions"
+        ],
+        [
+          4696,
+          "Strategies for Rebalancing"
+        ]
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Transactions",
+      "start_line": 4919,
+      "end_line": 5969,
+      "file": "chapters/ch07.md",
+      "sections": [
+        [
+          4953,
+          "The Slippery Concept of a Transaction"
+        ],
+        [
+          4963,
+          "The Meaning of ACID"
+        ],
+        [
+          4973,
+          "Atomicity"
+        ],
+        [
+          4987,
+          "Consistency"
+        ],
+        [
+          5007,
+          "Isolation"
+        ],
+        [
+          5023,
+          "Durability"
+        ],
+        [
+          5031,
+          "Replication and Durability"
+        ],
+        [
+          5055,
+          "Single-Object and Multi-Object Operations"
+        ],
+        [
+          5093,
+          "Single-object writes"
+        ],
+        [
+          5109,
+          "The need for multi-object transactions"
+        ],
+        [
+          5125,
+          "Handling errors and aborts"
+        ],
+        [
+          5147,
+          "Weak Isolation Levels"
+        ]
+      ]
+    },
+    {
+      "number": 8,
+      "title": "The Trouble with Distributed Systems",
+      "start_line": 5970,
+      "end_line": 6892,
+      "file": "chapters/ch08.md",
+      "sections": [
+        [
+          5992,
+          "Faults and Partial Failures"
+        ],
+        [
+          6004,
+          "—Coda Hale"
+        ],
+        [
+          6010,
+          "Cloud Computing and Supercomputing"
+        ],
+        [
+          6044,
+          "Building a Reliable System from Unreliable Components"
+        ],
+        [
+          6056,
+          "Unreliable Networks"
+        ],
+        [
+          6097,
+          "Network Faults in Practice"
+        ],
+        [
+          6108,
+          "Network partitions"
+        ],
+        [
+          6118,
+          "Detecting Faults"
+        ],
+        [
+          6140,
+          "Timeouts and Unbounded Delays"
+        ],
+        [
+          6154,
+          "Network congestion and queueing"
+        ],
+        [
+          6176,
+          "TCP Versus UDP"
+        ],
+        [
+          6192,
+          "Synchronous Versus Asynchronous Networks"
+        ]
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Consistency and Consensus",
+      "start_line": 6893,
+      "end_line": 8143,
+      "file": "chapters/ch09.md",
+      "sections": [
+        [
+          6917,
+          "Consistency Guarantees"
+        ],
+        [
+          6941,
+          "Linearizability"
+        ],
+        [
+          6959,
+          "What Makes a System Linearizable?"
+        ],
+        [
+          7035,
+          "Linearizability Versus Serializability"
+        ],
+        [
+          7039,
+          "Serializability"
+        ],
+        [
+          7051,
+          "Relying on Linearizability"
+        ],
+        [
+          7055,
+          "Locking and leader election"
+        ],
+        [
+          7063,
+          "Constraints and uniqueness guarantees"
+        ],
+        [
+          7075,
+          "Cross-channel timing dependencies"
+        ],
+        [
+          7095,
+          "Implementing Linearizable Systems"
+        ],
+        [
+          7103,
+          "Single-leader replication (potentially linearizable)"
+        ],
+        [
+          7109,
+          "Consensus algorithms (linearizable)"
+        ]
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Batch Processing",
+      "start_line": 8144,
+      "end_line": 9075,
+      "file": "chapters/ch10.md",
+      "sections": [
+        [
+          8156,
+          "Services (online systems)"
+        ],
+        [
+          8160,
+          "Batch processing systems (offline systems)"
+        ],
+        [
+          8164,
+          "Stream processing systems (near-real-time systems)"
+        ],
+        [
+          8178,
+          "Batch Processing with Unix Tools"
+        ],
+        [
+          8195,
+          "Simple Log Analysis"
+        ],
+        [
+          8234,
+          "Chain of commands versus custom program"
+        ],
+        [
+          8258,
+          "⑤ Print out those top five entries."
+        ],
+        [
+          8262,
+          "Sorting versus in-memory aggregation"
+        ],
+        [
+          8274,
+          "The Unix Philosophy"
+        ],
+        [
+          8294,
+          "A uniform interface"
+        ],
+        [
+          8310,
+          "Separation of logic and wiring"
+        ],
+        [
+          8320,
+          "Transparency and experimentation"
+        ]
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Stream Processing",
+      "start_line": 9076,
+      "end_line": 10055,
+      "file": "chapters/ch11.md",
+      "sections": [
+        [
+          9096,
+          "Transmitting Event Streams"
+        ],
+        [
+          9116,
+          "Messaging Systems"
+        ],
+        [
+          9136,
+          "Direct messaging from producers to consumers"
+        ],
+        [
+          9152,
+          "Message brokers"
+        ],
+        [
+          9160,
+          "Message brokers compared to databases"
+        ],
+        [
+          9176,
+          "Multiple consumers"
+        ],
+        [
+          9180,
+          "Load balancing"
+        ],
+        [
+          9184,
+          "Fan-out"
+        ],
+        [
+          9196,
+          "Acknowledgments and redelivery"
+        ],
+        [
+          9212,
+          "Partitioned Logs"
+        ],
+        [
+          9224,
+          "Using logs for message storage"
+        ],
+        [
+          9242,
+          "Logs compared to traditional messaging"
+        ]
+      ]
+    },
+    {
+      "number": 12,
+      "title": "The Future of Data Systems",
+      "start_line": 10056,
+      "end_line": 11506,
+      "file": "chapters/ch12.md",
+      "sections": [
+        [
+          10068,
+          "Data Integration"
+        ],
+        [
+          10080,
+          "Combining Specialized Tools by Deriving Data"
+        ],
+        [
+          10090,
+          "Reasoning about dataflows"
+        ],
+        [
+          10102,
+          "Derived data versus distributed transactions"
+        ],
+        [
+          10116,
+          "The limits of total ordering"
+        ],
+        [
+          10130,
+          "Ordering events to capture causality"
+        ],
+        [
+          10150,
+          "Batch and Stream Processing"
+        ],
+        [
+          10162,
+          "Maintaining derived state"
+        ],
+        [
+          10174,
+          "Reprocessing data for application evolution"
+        ],
+        [
+          10180,
+          "Schema Migrations on Railways"
+        ],
+        [
+          10192,
+          "The lambda architecture"
+        ],
+        [
+          10208,
+          "Unifying batch and stream processing"
+        ]
+      ]
+    }
+  ],
+  "backmatter_start_line": 11507,
+  "generated": "2026-11-12"
+}
